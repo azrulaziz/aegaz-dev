@@ -1,0 +1,243 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%; 
+    font-family: 'Roboto', sans-serif;  
+}
+
+/* NAV & HEADER */
+
+/* VIDEO */
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-30%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    object-fit: cover;
+}
+
+#wrapper {
+    height: 100%;
+    width: 100%;
+    /* background-color; */
+    /* background-image: url('https://source.unsplash.com/WLUHO9A_xik/1600x900'); */
+    /* background-position: ; */
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: transparent;
+    color: white;
+    align-items: center;
+}
+
+#container ul li {
+    display: inline-block;
+    /* list-style: none; */
+    padding-right: 10px;
+}
+
+#container ul {
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: #111;
+    width: 100px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.menu-center .services:hover .dropdown-content {
+    display: block;
+    opacity: 0.8;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 5px;
+    color: #fff;
+    padding-left: 10px;
+}
+
+.dropdown-content a:hover {
+    opacity: 0.2;
+}
+
+#container h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+    width: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+}
+
+a:hover {
+    opacity: 0.8;
+   
+}
+
+.brand {
+    padding-left: 10px;
+    align-self: center;
+    width: 100px;
+}
+
+.menu-center {
+    justify-self: center;
+    align-self: center;
+}
+
+.menu-right {
+    justify-self: end;
+    align-self: center;
+    padding-right: 10px;
+}
+
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.mainlogo h1 {
+    color: #fff;
+    font-size: 10em;
+}
+
+.side-nav{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    opacity: 0.9;
+    overflow-x: hidden;
+    padding-top: 40px;
+    transition: 0.5s;
+}
+
+.side-nav a {
+    padding: 10px 10px 10px 10px;
+    font-size: 15px;
+    display: block;
+    transition: 0.3s;
+    text-align: left;
+}
+
+.side-nav .btn-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 25px;
+    margin-bottom: 140px;
+}
+
+
+
+/* END OF NAV & HEADER */
+
+/* ********** */
+
+/* SECTIONS */
+
+.section-A-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    padding-top: 20px; 
+}
+
+
+.section-B-wrapper {
+    display: grid;
+    height: 100%;
+    color: #fff;
+    background: black;
+    background-image: url('https://source.unsplash.com/-v9Z6-uJxk4/1600x900');
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.about h2 {
+    font-size: 5em;
+}
+
+.section-C-wrapper {
+    display: grid;
+    height: 100%;
+    background:#fff;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.section-C-wrapper p {
+    margin: 0 200px 0 200px;
+    align-self: start;
+}
+
+
+
+/* MEDIA QUERIES */
+@media (min-width: 767px) {
+    #btn-open {
+        display: none;
+    }   
+
+}
+
+@media (max-width: 767px) {
+    .menu-center, .brand h2, .menu-right ul li a {
+        display: none;
+    }
+
+    #container {
+        grid-template-columns: 1fr;
+        align-items: end;
+    }
+
+    .mainlogo h1 {
+        color: #fff;
+        font-size: 5em;
+    }
+
+    .about h2 {
+        font-size: 3em;
+    }
+}
+
