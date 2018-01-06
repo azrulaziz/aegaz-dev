@@ -7,25 +7,44 @@ html, body {
     margin: 0;
     height: 100%; 
     font-family: 'Roboto', sans-serif;  
+    overflow: hidden;
+}
+
+.preloader {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background-position: fixed;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.preload-logo {
+    display: none;
+    color: white;
+    font-size: 2em;
 }
 
 /* NAV & HEADER */
 
 /* VIDEO */
+
 video {
     position: absolute;
     top: 50%;
     left: 50%;
     min-width: 100%;
-    max-height: 100%;
+    min-height: 100%;
     width: 100%;
     height: 100vh;
     z-index: -100;
     -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-30%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     background-size: cover;
     object-fit: cover;
+    
 }
 
 /* LOGO */
@@ -118,7 +137,7 @@ a:hover {
 
 .brand {
     padding-left: 10px;
-    align-self: center;
+    align-self: end;
     width: 100px;
 }
 
@@ -222,7 +241,10 @@ a:hover {
 }
 
 .section-C-wrapper p {
-    margin: 0 200px 0 200px;
+    /*padding: 0 200px 0 200px;*/
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 500px;
     align-self: start;
 }
 
@@ -256,8 +278,8 @@ a:hover {
     }
 
     .headinglogo {
-        width: 250px;
-        height: 100px;
+        width: 280px;
+        height: 150px;
         margin: 0;
         padding: 0;
     }
@@ -274,6 +296,13 @@ a:hover {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+    }
+    
+    .headinglogo {
+        width: 200px;
+        height: 120px;
+        margin: 0;
+        padding: 0;
     }
 }
 
